@@ -26,6 +26,12 @@ public class QuestionController {
 
     }
 
+    @GetMapping()
+    public List<Question> getAllQuestions (){
+        return questionService.getAllQuestions();
+    }
+
+
     @DeleteMapping("/{id}")
     public void deleteById (@PathVariable String id ){
         questionService.deleteById(id);
